@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Source Testing</title>
+  </head>
+  <body class="flex flex-col gap-2 overflow-x-hidden px-2">
+    <h1 class="font-bold text-3xl">Source Preview</h1>
+    <div class="grid grid-cols-3 gap-2">
+      <dots-editor class="w-full col-span-2" inspector="ei"></dots-editor>
+      <div id="ei" class="inspector">
+        <h2 class="font-bold text-xl">Inspector</h2>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      .inspector .inspector-controls {
+        @apply flex flex-col gap-2;
+      }
+
+      .inspector .inspector-controls h3 {
+        @apply underline;
+      }
+
+      .inspector .inspector-controls .control {
+        @apply flex justify-between;
+      }
+
+      .inspector .inspector-controls .control label {
+        @apply capitalize;
+      }
+    </style>
+  </body>
+</html>
